@@ -145,6 +145,8 @@ class TriMesh {
 	//!
 	void							setTexCoords( const std::vector<Vec2f> &coords ) { mTexCoords = coords; }
 
+	//!
+	void							setVertices( const std::vector<Vec3f> &verts ){ mVertices = verts; };
 	//! Calculates the bounding box of all vertices
 	AxisAlignedBox3f	calcBoundingBox() const;
 	//! Calculates the bounding box of all vertices as transformed by \a transform
