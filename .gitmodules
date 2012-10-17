@@ -1,0 +1,6 @@
+[submodule "blocks/ph"]
+	path = blocks/ph
+	url = https://github.com/paulhoux/Cinder-Blocks.git
+[submodule "samples/FaceTracker"]
+	path = samples/FaceTracker
+	url = https://github.com/TimGroeneboom/FaceTracker.git

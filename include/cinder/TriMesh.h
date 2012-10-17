@@ -140,7 +140,10 @@ class TriMesh {
 	//! Trimesh indices are ordered such that the indices of triangle T are { indices[T*3+0], indices[T*3+1], indices[T*3+2] }
 	std::vector<uint32_t>&			getIndices() { return mIndices; }		
 	//! Trimesh indices are ordered such that the indices of triangle T are { indices[T*3+0], indices[T*3+1], indices[T*3+2] }
-	const std::vector<uint32_t>&	getIndices() const { return mIndices; }		
+	const std::vector<uint32_t>&	getIndices() const { return mIndices; }	
+
+	//!
+	void							setTexCoords( const std::vector<Vec2f> &coords ) { mTexCoords = coords; }
 
 	//! Calculates the bounding box of all vertices
 	AxisAlignedBox3f	calcBoundingBox() const;
