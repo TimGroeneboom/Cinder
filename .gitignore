@@ -11,6 +11,8 @@ boost/
 build/
 lib/libcinder*.a
 lib/cinder*.lib
+blocks/opencv/docs
+blocks/opencv/samples
 
 # Windows cruft
 *.suo
