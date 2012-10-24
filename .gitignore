@@ -21,3 +21,4 @@ blocks/opencv/samples
 Debug/
 Release/
 ipch/
+samples/FaceTracker
