@@ -1,0 +1,6 @@
+[submodule "samples/KinectEcad"]
+	path = samples/KinectEcad
+	url = https://github.com/TimGroeneboom/KinectEcard.git
+[submodule "blocks/cinder_kinect"]
+	path = blocks/cinder_kinect
+	url = https://github.com/TimGroeneboom/Cinder-KinectSdk.git
