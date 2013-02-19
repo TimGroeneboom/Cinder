@@ -50,6 +50,7 @@ class AreaT {
 	T				getWidth() const { return x2 - x1; }
 	T				getHeight() const { return y2 - y1; }
 	Vec2<T>			getSize() const { return Vec2<T>( x2 - x1, y2 - y1 ); }
+	Vec2f			getCenter() const { return Vec2f( ( x1 + x2 ) / 2.0f, ( y1 + y2 ) / 2.0f ); }
 	T				calcArea() const { return getWidth() * getHeight(); }
 	
 	void			clipBy( const AreaT<T> &clip );
@@ -81,6 +82,13 @@ class AreaT {
 	template<typename Y>
 	bool			contains( const Vec2<Y> &offset ) const { return contains( Vec2<T>( (T)math<Y>::ceil( offset. x ), (T)math<Y>::ceil( offset.y ) ) ); }
 	bool			intersects( const AreaT<T> &area ) const;
+
+	//! Expands the Area to include \a point in its interior
+	void		include( const Vec2<T> &point );
+	//! Expands the Area to include all points in \a points in its interior
+	void		include( const std::vector<Vec2<T> > &points );
+	//! Expands the Area to include \a rect in its interior
+	void		include( const AreaT &area );
 
 	//! Returns the distance between the point \a pt and the rectangle. Points inside the Area return \c 0.
 	template<typename Y>
@@ -119,5 +127,7 @@ typedef AreaT<int32_t>						Area;
 typedef AreaT<boost::rational<int32_t> >	AreaRational;
 
 extern std::pair<Area,Vec2i> clippedSrcDst( const Area &srcSurfaceBounds, const Area &srcArea, const Area &dstSurfaceBounds, const Vec2i &dstLT );
+
+template <> Vec2f AreaRational::getCenter() const;
 
 } // namespace cinder

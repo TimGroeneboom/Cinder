@@ -172,6 +172,7 @@ class Tween : public TweenBase {
 		Options&	reverseFinishFn( const TweenBase::FinishFn &reverseFinishFn ) { mTweenRef->setReverseFinishFn( reverseFinishFn ); return *this; }
 		Options&	easeFn( const EaseFn &easeFunc ) { mTweenRef->setEaseFn( easeFunc ); return *this; }
 		Options&	delay( float delayAmt ) { mTweenRef->setStartTime( mTweenRef->getStartTime() + delayAmt ); return *this; }
+		Options&	startTime( float time ) { mTweenRef->setStartTime( time ); return *this; }
 		Options&	autoRemove( bool remove = true ) { mTweenRef->setAutoRemove( remove ); return *this; }
 		Options&	loop( bool doLoop = true ) { mTweenRef->setLoop( doLoop ); return *this; }
 		Options&	pingPong( bool doPingPong = true ) { mTweenRef->setPingPong( doPingPong ); return *this; }
@@ -276,6 +277,9 @@ class AnimBase {
   public:
   	//! removes self from Timeline
 	void 	stop();
+
+	//! returns false if any tweens are active on 'this', otherwise true
+	bool isComplete() const;
 	
 	//! returns the parent timeline for the Anim<> or NULL if there is none
 	TimelineRef	getParent() const { return mParentTimeline; }

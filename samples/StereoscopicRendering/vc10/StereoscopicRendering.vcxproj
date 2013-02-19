@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{74202EDD-91D2-4D2A-B0B6-355CEB16E6BE}</ProjectGuid>
+    <ProjectGuid>{84638D62-9C27-43F1-ADFC-6B21200F86A5}</ProjectGuid>
     <RootNamespace>StereoscopicRenderingApp</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
@@ -113,6 +113,10 @@
     <ResourceCompile Include="Resources.rc" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\assets\shaders\anaglyph_frag.glsl" />
+    <None Include="..\assets\shaders\anaglyph_vert.glsl" />
+    <None Include="..\assets\shaders\interlaced_frag.glsl" />
+    <None Include="..\assets\shaders\interlaced_vert.glsl" />
     <None Include="..\assets\shaders\phong_frag.glsl" />
     <None Include="..\assets\shaders\phong_vert.glsl" />
   </ItemGroup>

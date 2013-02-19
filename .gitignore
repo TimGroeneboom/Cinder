@@ -19,6 +19,7 @@ blocks/opencv/samples
 *.suo
 *.ncb
 *.sdf
+*.opensdf
 Debug/
 Release/
 ipch/
