@@ -1,0 +1,9 @@
+[submodule "cinder-sketchbook"]
+	path = cinder-sketchbook
+	url = https://github.com/TimGroeneboom/cinder-sketchbook.git
+[submodule "opencv"]
+	path = opencv
+	url = git://github.com/cinder/Cinder-OpenCV.git
+[submodule "Cinder-OpenCV"]
+	path = Cinder-OpenCV
+	url = git://github.com/cinder/Cinder-OpenCV.git
