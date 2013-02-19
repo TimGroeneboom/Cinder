@@ -1,0 +1,3 @@
+[submodule "cinder-sketchbook"]
+	path = cinder-sketchbook
+	url = https://TImGroeneboom@github.com/TimGroeneboom/cinder-sketchbook.git
